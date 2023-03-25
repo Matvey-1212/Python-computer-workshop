@@ -1,4 +1,4 @@
-# Python-computer-workshop
+# Python-computer-workshop (Sep.2022 - Present)
 This repository contains the homework solutions for the Computer Practicum in Python course in MIEM HSE. The repository is structured with separate folders, each dedicated to an individual assignment.
 
 ### Contents:
