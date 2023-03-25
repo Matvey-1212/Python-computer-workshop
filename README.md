@@ -20,7 +20,7 @@ Apply Procrustes transformation to different shapes, apply clustering method to 
 #### Homework 5: 
 Implement a simulation model of Boids.
 
-![image](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids5000.gif)
+![image](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif)
 
 #### Homework _:
 ....
