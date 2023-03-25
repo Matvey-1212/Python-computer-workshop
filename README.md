@@ -1,1 +1,28 @@
 # Python-computer-workshop
+This repository contains the homework solutions for the Computer Practicum in Python course in MIEM HSE. The repository is structured with separate folders, each dedicated to an individual assignment.
+
+### Contents:
+#### Homework 1: 
+According to the Ising model, calculate the average energy for a specified chain of molecules, save the array of average energies, display the calculation time of each iteration, and create a heat map.
+
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/feromHeatMap.png" width="500">
+
+#### Homework 2: 
+Build an interactive map of the Julia set.
+
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/bokeh_plot.png" width="500">
+
+#### Homework 3: 
+Apply Procrustes transformation to different shapes, apply clustering method to the obtained vectors, and visualize each cluster.
+
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/procrust.png" width="500">
+
+#### Homework 5: 
+Implement a simulation model of Boids.
+
+![image](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids5000.gif)
+
+#### Homework _:
+....
+
+I am grateful to Stanislav Bober for teaching this course and providing us with challenging and exciting homework assignments.
