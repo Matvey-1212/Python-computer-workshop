@@ -5,12 +5,12 @@ This repository contains the homework solutions for the Computer Practicum in Py
 #### Homework 1: 
 According to the Ising model, calculate the average energy for a specified chain of molecules, save the array of average energies, display the calculation time of each iteration, and create a heat map.
 
-<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/feromHeatMap.png" width="500">
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/feromHeatMap.png" width="300">
 
 #### Homework 2: 
 Build an interactive map of the Julia set.
 
-<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/bokeh_plot.png" width="500">
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/bokeh_plot.png" width="300">
 
 #### Homework 3: 
 Apply Procrustes transformation to different shapes, apply clustering method to the obtained vectors, and visualize each cluster.
@@ -23,7 +23,7 @@ Implement a simulation model of Boids.
   <source src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids1000.mp4" type="video/mp4">
 </video>
 
-<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="500">
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="300">
 
 #### Homework 6: 
 Implement shaders from shaderToy:
