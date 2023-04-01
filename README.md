@@ -19,6 +19,9 @@ Apply Procrustes transformation to different shapes, apply clustering method to 
 
 #### Homework 5: 
 Implement a simulation model of Boids.
+<video width="320" height="240" controls>
+  <source src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids1000.mp4" type="video/mp4">
+</video>
 
 <img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="500">
 
@@ -26,6 +29,8 @@ Implement a simulation model of Boids.
 Implement shaders from shaderToy:
 1) <a href="https://www.shadertoy.com/view/DdV3zG"> SDF Interpolation Experiment  </a>
 2) <a href="https://www.shadertoy.com/view/cst3zX"> Collecting some github stars  </a>
+
+And rewrite it to your liking.
 
 #### Homework _:
 ....
