@@ -1,4 +1,4 @@
-# Python-computer-workshop
+# Python-computer-workshop (Sep.2022 - Present)
 This repository contains the homework solutions for the Computer Practicum in Python course in MIEM HSE. The repository is structured with separate folders, each dedicated to an individual assignment.
 
 ### Contents:
@@ -20,7 +20,8 @@ Apply Procrustes transformation to different shapes, apply clustering method to 
 #### Homework 5: 
 Implement a simulation model of Boids.
 
-![image](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids5000.gif)
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="500">
+
 
 #### Homework _:
 ....
