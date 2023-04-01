@@ -22,6 +22,10 @@ Implement a simulation model of Boids.
 
 <img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="500">
 
+#### Homework 6: 
+Implement shaders from shaderToy:
+1) <a href="https://www.shadertoy.com/view/DdV3zG"> SDF Interpolation Experiment  </a>
+2) <a href="https://www.shadertoy.com/view/cst3zX"> Collecting some github stars  </a>
 
 #### Homework _:
 ....
