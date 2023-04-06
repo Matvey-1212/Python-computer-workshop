@@ -1,5 +1,5 @@
 """
-    В этом файле все комментарии обозначают внесенные изменения
+    В этом файле все комментарии обозначают внесенные измененияc
 """
 import taichi as ti
 import taichi_glsl as ts
@@ -56,7 +56,7 @@ def box(p, b):
 
 
 @ti.func
-def hash(co):
+def myhash(co):
     """
     Calculate a simple hash value for a given 2D point.
     :param co:
@@ -137,7 +137,7 @@ def stars_effect(p, t, flag):
     new_pos, current_pos = mod1(current_pos, ts.vec2(CELL_WIDTH))
     new_pos.x += direction * t * 10.0
     new_end_pos, new_pos.x = mod1(new_pos.x, 24.0)
-    noise_hash0 = hash(new_end_pos + 123.4)
+    noise_hash0 = myhash(new_end_pos + 123.4)
     noise_hash1 = ts.fract(8667.0 * noise_hash0)
     end_pos = new_pos * CELL_WIDTH
     radius = ts.mix(0.25, 0.5, noise_hash0)
@@ -170,10 +170,10 @@ def effect(p, t):
         The color of the pixel at the input point based on the hexagram effect.
     """
     rgb_base = 1.0 / ts.vec3(255.0)
-    bg_color = pow(rgb_base * ts.vec3(255.0, 0.0, 0.0), ts.vec3(2.0))
-    fg_color = pow(rgb_base * ts.vec3(24.0, 27.0, 34.0), ts.vec3(2.0))
-    hi_color = pow(rgb_base * ts.vec3(255.0, 215.0, 0.0), ts.vec3(2.0))
-    hi_color2 = pow(rgb_base * ts.vec3(187.0, 187.0, 187.0), ts.vec3(2.0))
+    bg_color = rgb_base * ts.vec3(255.0, 0.0, 0.0)
+    fg_color = rgb_base * ts.vec3(24.0, 27.0, 34.0)
+    hi_color = rgb_base * ts.vec3(255.0, 215.0, 0.0)
+    hi_color2 =rgb_base * ts.vec3(187.0, 187.0, 187.0)
     anti_aliasing = 2.0 / RESOLUTION_F[1]
     current_pos = p
     new_pos, current_pos = mod1(current_pos, ts.vec2(CELL_WIDTH))
@@ -208,12 +208,11 @@ def effect(p, t):
     color = ts.mix(color, hi_color, end_color_pos4)
     color = ts.mix(color, hi_color, end_color_pos5)
 
-    color = ts.sqrt(color)
     return color
 
 
 @ti.kernel
-def render(t: ti.f32, frame: ti.int32):
+def render(t: ti.f32):
 
     # rotates the UV coordinates by sin func
     m = rot(ti.sin(t * 0.5) * 0.5)
@@ -241,7 +240,7 @@ if __name__ == "__main__":
                 break
 
         t = time.time() - start
-        render(t, frame)
+        render(t)
         gui.set_image(pixels)
         gui.show()
         frame += 1

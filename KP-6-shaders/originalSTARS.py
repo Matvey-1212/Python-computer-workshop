@@ -38,7 +38,7 @@ def mod1(p, size):
 
 
 @ti.func
-def box(p, b):
+def box(coords, b):
     """
     Calculate the signed distance from a 2D point to a rectangle centered at the origin.
     :param p:
@@ -48,12 +48,12 @@ def box(p, b):
     :return:
         The signed distance field value for the input point 'coords' and the rectangle.
     """
-    d = abs(p) - b
+    d = abs(coords) - b
     return max(d, 0.0).norm() + min(max(d[0], d[1]), 0.0)
 
 
 @ti.func
-def hash(co):
+def myhash(co):
     """
     Calculate a simple hash value for a given 2D point.
     :param co:
@@ -126,9 +126,9 @@ def effect(p, t):
     """
     # Define base colors in the RGB space
     rgb_base = 1.0 / ts.vec3(255.0)
-    bg_color = pow(rgb_base * ts.vec3(14.0, 17.0, 23.0), ts.vec3(2.0))
-    fg_color = pow(rgb_base * ts.vec3(24.0, 27.0, 34.0), ts.vec3(2.0))
-    hi_color = pow(rgb_base * ts.vec3(132.0, 210.0, 91.0), ts.vec3(2.0))
+    bg_color = rgb_base * ts.vec3(14.0, 17.0, 23.0)
+    fg_color = rgb_base * ts.vec3(24.0, 27.0, 34.0)
+    hi_color = rgb_base * ts.vec3(132.0, 210.0, 91.0)
     anti_aliasing = 2.0 / RESOLUTION_F[1]
     cell_aa = CELL_WIDTH
     current_pos = p
@@ -145,7 +145,7 @@ def effect(p, t):
         new_end_pos, new_pos.x = mod1(new_pos.x, 24.0)
 
         # Calculate noise values using hash function
-        noise_hash0 = hash(new_end_pos + 123.4)
+        noise_hash0 = myhash(new_end_pos + 123.4)
         noise_hash1 = ts.fract(8667.0 * noise_hash0)
 
         # Calculate the final position
@@ -178,12 +178,11 @@ def effect(p, t):
         # Update the final color by mixing the current color and the end color based on current distance
         color = ts.mix(color, end_color, ts.smoothstep(current_dist, anti_aliasing, -anti_aliasing))
 
-    color = ts.sqrt(color)
     return color
 
 
 @ti.kernel
-def render(t: ti.f32, frame: ti.int32):
+def render(t: ti.f32):
     for frag_coord in ti.grouped(pixels):
         uv = (frag_coord - 0.5 * RESOLUTION_F) / RESOLUTION_F[1]
         uv *= 2.0
@@ -204,7 +203,7 @@ if __name__ == "__main__":
                 break
 
         t = time.time() - start
-        render(t, frame)
+        render(t)
         gui.set_image(pixels)
         gui.show()
         frame += 1

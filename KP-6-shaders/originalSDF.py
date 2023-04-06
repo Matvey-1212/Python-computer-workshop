@@ -76,7 +76,7 @@ def rotation_matrix(angle):
 
 
 @ti.kernel
-def render(time: ti.f32, frame: ti.int32):
+def render(time: ti.f32):
     """
     The render function is a Taichi kernel that generates a two-dimensional animation
     of a circular shape morphing into a square shape, with a pulsating effect.
@@ -123,7 +123,7 @@ if __name__ == "__main__":
                 break
 
         current_time = time.time() - start_time
-        render(current_time, frame)
+        render(current_time)
         gui.set_image(pixels)
         gui.show()
         frame += 1
