@@ -20,6 +20,8 @@ Apply Procrustes transformation to different shapes, apply clustering method to 
 #### Homework 5: 
 Implement a simulation model of Boids.
 
+[results(youTube)](https://youtu.be/VHMV89lsRzM)
+
 <img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/boids2.gif" width="300">
 
 #### Homework 6: 
@@ -42,7 +44,12 @@ Original STARS and changed STARS:
 </div>
 
 
-#### Homework _:
-....
+#### Homework 7:
+
+[results(youTube)](https://youtu.be/H-qBf2dYjPQ)
+
+<img src="[https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/waves2.gif](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/waves2.gif)" width="300">
+
+
 
 I am grateful to Stanislav Bober for teaching this course and providing us with challenging and exciting homework assignments.
