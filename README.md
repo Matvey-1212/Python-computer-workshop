@@ -45,10 +45,13 @@ Original STARS and changed STARS:
 
 
 #### Homework 7:
+Implement a simulation model of light diffraction through two lenses:
 
 [results(youTube)](https://youtu.be/H-qBf2dYjPQ)
 
-<img src="[https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/waves2.gif](https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/waves2.gif)" width="300">
+<img src="https://github.com/Matvey-1212/Python-computer-workshop/blob/main/ReadMeContent/waves2.gif" width="300">
+
+
 
 
 
